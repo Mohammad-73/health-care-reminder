@@ -3,7 +3,7 @@ import "./App.css";
 
 function App() {
   const [isRunning, setIsRunning] = useState(false);
-  const [eyeReminderTime, setEyeReminderTime] = useState(10 * 60); // 10 minutes in seconds
+  const [eyeReminderTime, setEyeReminderTime] = useState(7 * 60); // 7 minutes in seconds
   const [walkReminderTime, setWalkReminderTime] = useState(30 * 60); // 30 minutes in seconds
 
   useEffect(() => {
@@ -32,7 +32,7 @@ function App() {
         "Close Your Eyes",
         "Take a break and close your eyes for a few seconds."
       );
-      setEyeReminderTime(10 * 60); // Reset to 10 minutes
+      setEyeReminderTime(7 * 60); // Reset to 7 minutes
     }
   }, [eyeReminderTime]);
 
@@ -63,7 +63,7 @@ function App() {
   const toggleReminders = () => {
     setIsRunning(!isRunning);
     if (!isRunning) {
-      setEyeReminderTime(10 * 60); // Reset to 10 minutes
+      setEyeReminderTime(7 * 60); // Reset to 7 minutes
       setWalkReminderTime(30 * 60); // Reset to 30 minutes
     }
   };
